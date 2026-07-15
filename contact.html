@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact | Outcome Media</title>
+    <!-- We keep the same style block to ensure fonts/colors match -->
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; padding: 5%; max-width: 800px; margin: 0 auto; }
-        h1 { color: #041E3A; margin-bottom: 2rem; }
-        .contact-box { padding: 2rem; border: 1px solid #E2E8F0; border-radius: 8px; }
-        a { color: #2E8B57; font-weight: bold; }
+        :root { --primary-navy: #041E3A; --accent-green: #2E8B57; --text-gray: #4A5568; --border-color: #E2E8F0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; margin: 0; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; border-bottom: 1px solid var(--border-color); }
+        .nav-links { display: flex; gap: 2rem; font-size: 0.9rem; font-weight: 600; }
+        .content { padding: 4rem 5%; max-width: 800px; margin: 0 auto; min-height: 50vh; }
+        h1 { color: var(--primary-navy); margin-bottom: 2rem; }
+        a { color: var(--accent-green); font-weight: bold; }
+        footer { background: var(--primary-navy); color: white; padding: 4rem 5% 2rem 5%; margin-top: 4rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 3rem; }
+        .footer-logo { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; display: block; }
+        .footer-nav ul { list-style: none; }
+        .footer-nav ul li { margin-bottom: 0.8rem; font-size: 0.9rem; color: #cbd5e1; }
     </style>
 </head>
 <body>
-    <h1>Contact Us</h1>
-    <div class="contact-box">
+
+    <nav>
+        <a href="index.html"><img src="LOGO.jpeg" alt="Logo" style="max-height: 60px;"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Research</a>
+            <a href="#">Research Series</a>
+            <a href="#">Methodology</a>
+            <a href="#">Archive</a>
+            <a href="#">About</a>
+            <a href="contact.html" style="border-bottom: 2px solid var(--primary-navy);">Contact</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Contact Us</h1>
         <p>Email: <a href="mailto:om.whathappenednext@gmail.com">om.whathappenednext@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/company/outcome-media-research/" target="_blank">Outcome Media Official</a></p>
-        <p style="margin-top: 2rem;"><a href="index.html">&larr; Back to Home</a></p>
     </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div><span class="footer-logo">OUTCOME MEDIA</span><p>Independent research publication.</p></div>
+            <div class="footer-nav"><h4>EXPLORE</h4><ul><li><a href="index.html">Home</a></li><li>Research</li></ul></div>
+            <div class="footer-nav"><h4>PUBLICATION</h4><ul><li>About</li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-nav"><h4>FOLLOW</h4><ul><li><a href="https://www.linkedin.com/company/outcome-media-research/" target="_blank">LinkedIn</a></li></ul></div>
+        </div>
+    </footer>
 </body>
 </html>
